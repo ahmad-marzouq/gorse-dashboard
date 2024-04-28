@@ -42,6 +42,11 @@
             <span style="font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif">
               {{ item.Labels }}
             </span>
+            <p  v-if="item.Image" class="m-0 my-1 mb-2 text-muted text-semibold">
+              <d-col sm="12" md="10" >
+                <d-image v-bind:src="item.Image"  v-bind:alt="item.Comment" width="200"></d-image>
+              </d-col>
+            </p>
           </div>
 
           <p

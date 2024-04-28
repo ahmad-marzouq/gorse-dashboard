@@ -60,6 +60,14 @@
                     <label class="text-light">{{ current_item.Comment }}</label>
                   </d-col>
                 </d-row>
+                <d-row v-if="current_item.Image">
+                  <d-col sm="12" md="2">
+                    <label>Image</label>
+                  </d-col>
+                  <d-col sm="12" md="10">
+                    <d-image v-bind:src="current_item.Image"  v-bind:alt="current_item.Comment" width="250"></d-image>
+                  </d-col>
+                </d-row>
               </d-list-group-item>
             </d-list-group>
           </div>
