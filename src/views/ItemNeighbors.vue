@@ -100,6 +100,7 @@
               <thead class="bg-light">
                 <tr>
                   <th scope="col" class="border-0">ID</th>
+                  <th scope="col" class="border-0">Image</th>
                   <th scope="col" class="border-0">Categories</th>
                   <th scope="col" class="border-0">Timestamp</th>
                   <th scope="col" class="border-0">Labels</th>
@@ -110,6 +111,7 @@
               <tbody>
                 <tr v-for="(item, idx) in items" :key="idx">
                   <td>{{ item.ItemId }}</td>
+                  <td><d-image v-if="item.Image" v-bind:src="item.Image" width="200"></d-image></td>
                   <td>
                     <div>
                       <d-badge
