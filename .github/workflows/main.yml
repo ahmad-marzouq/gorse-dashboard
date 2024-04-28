@@ -48,7 +48,7 @@ jobs:
           git rm -r --cached .
           rm statik.go go.mod go.sum
           cp -f ../gorse-dashboard/statik/statik.go statik.go
-          go mod init github.com/ahmad-marzouq/gorse-dashboard
+          go mod init github.com/gorse-io/dashboard
           go mod tidy
           git add statik.go go.mod go.sum
           git commit -m "Build embed files"
