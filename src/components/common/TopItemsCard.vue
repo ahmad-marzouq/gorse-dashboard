@@ -37,6 +37,11 @@
             <span style="font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif">
               {{ item.Labels }}
             </span>
+            <div v-if="item.Image" class="blog-comments__actions">
+            <span style="font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif">
+              <d-image v-bind:src="item.Image"  v-bind:alt="item.Comment" width="200"></d-image >
+            </span>
+            </div>
           </div>
 
           <p
