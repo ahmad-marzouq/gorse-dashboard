@@ -1,5 +1,5 @@
 module github.com/gorse-io/dashboard
 
-go 1.21.9
+go 1.24.13
 
-require github.com/rakyll/statik v0.1.7
+require github.com/rakyll/statik v0.1.8
