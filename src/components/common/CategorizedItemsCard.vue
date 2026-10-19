@@ -30,6 +30,7 @@
           <p class="m-0 my-1 mb-2 text-muted text-semibold">
             {{ item.Comment }}
           </p>
+          <img v-if="item.Image" :src="item.Image" :alt="item.Comment" width="200" class="mb-2" />
 
           <!-- Content - Actions -->
           <div class="blog-comments__actions">

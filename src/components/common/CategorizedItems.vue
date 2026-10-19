@@ -34,6 +34,7 @@
           <thead class="bg-light">
             <tr>
               <th scope="col" class="border-0">ID</th>
+              <th scope="col" class="border-0">Image</th>
               <th scope="col" class="border-0">Categories</th>
               <th scope="col" class="border-0">Timestamp</th>
               <th scope="col" class="border-0">Labels</th>
@@ -44,6 +45,7 @@
           <tbody>
             <tr v-for="(item, idx) in items" :key="idx">
               <td>{{ item.ItemId }}</td>
+              <td><img v-if="item.Image" :src="item.Image" :alt="item.Comment" width="200" /></td>
               <td>
                 <div>
                   <d-badge outline theme="secondary" v-for="(category, idx) in item.Categories" :key="idx">

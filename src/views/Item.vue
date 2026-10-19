@@ -56,6 +56,14 @@
                     <label class="text-light">{{ current_item.Comment }}</label>
                   </d-col>
                 </d-row>
+                <d-row v-if="current_item.Image">
+                  <d-col sm="12" md="2">
+                    <label>Image</label>
+                  </d-col>
+                  <d-col sm="12" md="10">
+                    <img :src="current_item.Image" :alt="current_item.Comment" width="250" />
+                  </d-col>
+                </d-row>
               </d-list-group-item>
             </d-list-group>
           </div>
@@ -98,6 +106,7 @@
                 <thead class="bg-light">
                   <tr>
                     <th scope="col" class="border-0">ID</th>
+                    <th scope="col" class="border-0">Image</th>
                     <th scope="col" class="border-0">Categories</th>
                     <th scope="col" class="border-0">Timestamp</th>
                     <th scope="col" class="border-0">Labels</th>
@@ -108,6 +117,7 @@
                 <tbody>
                   <tr v-for="(item, idx) in items" :key="idx">
                     <td>{{ item.ItemId }}</td>
+                    <td><img v-if="item.Image" :src="item.Image" :alt="item.Comment" width="200" /></td>
                     <td>
                       <div>
                         <d-badge outline theme="secondary" v-for="(category, idx) in item.Categories" :key="idx">
